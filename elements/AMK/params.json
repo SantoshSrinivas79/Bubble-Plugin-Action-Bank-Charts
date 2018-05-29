@@ -1,0 +1,588 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 400
+    },
+    "display": "Bar/Line - chart.js T",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1522705002378x687556656077504100/blank_PNG.png",
+    "fields": {
+        "AML": {
+            "caption": "DATA PROPERTIES",
+            "editor": "Label",
+            "name": "chart_data_source",
+            "rank": 0
+        },
+        "AMM": {
+            "caption": "Pick data source",
+            "default_val": "Bubble",
+            "doc": "Choose data source for chart",
+            "editor": "Dropdown",
+            "name": "data_select_data_source",
+            "options": "Bubble",
+            "rank": 1
+        },
+        "AMN": {
+            "caption": ".",
+            "doc": "Copy Google Sheets ID here",
+            "editor": "Label",
+            "name": "data_source_is_google_spreadsheet_key",
+            "rank": 2
+        },
+        "AMO": {
+            "caption": ".",
+            "doc": "Reference number for worksheet within Google Sheet",
+            "editor": "Label",
+            "name": "data_source_is_google_spreadsheet_sheet",
+            "rank": 3
+        },
+        "AMP": {
+            "caption": "Read data as dates",
+            "default_val": false,
+            "doc": "Parse values as date data",
+            "editor": "Checkbox",
+            "name": "category_date_formatting_enabled",
+            "rank": 4
+        },
+        "AMQ": {
+            "caption": "Enable data grouping",
+            "default_val": false,
+            "doc": "Group and merge matching category values",
+            "editor": "Checkbox",
+            "name": "data_merge_enabled",
+            "rank": 5
+        },
+        "AMR": {
+            "caption": ".",
+            "doc": "Consolidate data based on a time interval",
+            "editor": "Label",
+            "name": "data_time_rollup",
+            "optional": true,
+            "options": "Week,Month,Year",
+            "rank": 7
+        },
+        "AMS": {
+            "caption": "If you are using date data then use ':formatted as' to present it in YYYYMMDD format",
+            "editor": "Label",
+            "name": "chart_stacking_mode",
+            "options": "none,regular,100%",
+            "rank": 10
+        },
+        "AMT": {
+            "caption": "SERIES 1 PROPERTIES",
+            "editor": "Label",
+            "name": "series_1_properties",
+            "rank": 8
+        },
+        "AMU": {
+            "caption": "Graph type",
+            "default_val": "bar",
+            "doc": "Select type of chart for series",
+            "editor": "Dropdown",
+            "name": "series_1_chart_type",
+            "options": "bar,line",
+            "rank": 9
+        },
+        "AMV": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_1_bubble_category",
+            "rank": 11,
+            "value": "text"
+        },
+        "AMW": {
+            "caption": "Category data name",
+            "default_val": "Category name",
+            "doc": "Give category data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "category_header",
+            "rank": 12,
+            "value": "text"
+        },
+        "AMX": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series1_bubble_value",
+            "optional": true,
+            "rank": 13,
+            "value": "number"
+        },
+        "AMY": {
+            "caption": "Values data name",
+            "default_val": "Series 1",
+            "doc": "Give series data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_1_data_header",
+            "rank": 14,
+            "value": "text"
+        },
+        "AMZ": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_1_category_count",
+            "rank": 15
+        },
+        "AMa": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_1_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 16
+        },
+        "AMb": {
+            "caption": ".",
+            "doc": "Select axis to plot series on",
+            "editor": "Label",
+            "name": "series_1_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 17
+        },
+        "AMc": {
+            "caption": "Fill color #1",
+            "default_val": "rgba(1, 21, 38, 0.66)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_1_fill_color_1",
+            "optional": true,
+            "rank": 19
+        },
+        "AMd": {
+            "caption": "Line color",
+            "default_val": "rgba(1, 22, 39, 1)",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_1_line_color",
+            "optional": true,
+            "rank": 21
+        },
+        "AMe": {
+            "caption": "Fill color #2",
+            "default_val": "rgba(1, 21, 38, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_1_fill_color_2",
+            "optional": true,
+            "rank": 20
+        },
+        "AMf": {
+            "caption": "Line thickness",
+            "default_val": 1,
+            "doc": "Line thickness",
+            "editor": "StaticNumber",
+            "name": "series_1_line_thickness",
+            "rank": 22
+        },
+        "AMg": {
+            "caption": ".",
+            "editor": "Label",
+            "name": "...",
+            "rank": 23
+        },
+        "AMh": {
+            "caption": "SERIES 2 PROPERTIES",
+            "editor": "Label",
+            "name": "series_2_properties",
+            "rank": 24
+        },
+        "AMi": {
+            "caption": "Series 2 enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_2_enabled",
+            "rank": 25
+        },
+        "AMj": {
+            "caption": "Graph type",
+            "default_val": "bar",
+            "doc": "Select type of chart for series",
+            "editor": "Dropdown",
+            "name": "series_2_chart_type",
+            "optional": true,
+            "options": "bar,line",
+            "rank": 26
+        },
+        "AMk": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_2_bubble_category",
+            "optional": true,
+            "rank": 27,
+            "value": "text"
+        },
+        "AMl": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series2_bubble_value",
+            "optional": true,
+            "rank": 28,
+            "value": "number"
+        },
+        "AMm": {
+            "caption": "Values data name",
+            "default_val": "Series 2",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_2_data_header",
+            "optional": true,
+            "rank": 29,
+            "value": "text"
+        },
+        "AMn": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_2_category_count",
+            "rank": 30
+        },
+        "AMo": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_2_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 31
+        },
+        "AMp": {
+            "caption": " .",
+            "editor": "Label",
+            "name": "series_2_axis_to_plot_series_on",
+            "options": "Left axis,Right axis",
+            "rank": 32
+        },
+        "AMq": {
+            "caption": "Fill color #1",
+            "default_val": "rgba(255, 159, 25, 0.63)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_2_fill_color_1",
+            "optional": true,
+            "rank": 34
+        },
+        "AMr": {
+            "caption": "Line color",
+            "default_val": "rgba(255, 159, 28, 1)",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_2_line_color",
+            "optional": true,
+            "rank": 36
+        },
+        "AMt": {
+            "caption": " Fill color #2",
+            "default_val": "rgba(255, 159, 25, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_2_fill_color_2",
+            "rank": 35
+        },
+        "AMu": {
+            "caption": "Line thickness",
+            "default_val": 1,
+            "doc": "Line thickness",
+            "editor": "StaticNumber",
+            "name": "series_2_line_thickness",
+            "rank": 37
+        },
+        "AMv": {
+            "caption": "CHART STYLING",
+            "editor": "Label",
+            "name": "chart_styling",
+            "rank": 38
+        },
+        "AMw": {
+            "caption": " .",
+            "doc": "Display a loading graphic on chart load",
+            "editor": "Label",
+            "name": "loading_icon",
+            "rank": 39
+        },
+        "AMx": {
+            "caption": " .",
+            "doc": "Change color of loading graphic",
+            "editor": "Label",
+            "name": "loading_icon_color",
+            "optional": true,
+            "rank": 40
+        },
+        "AMy": {
+            "caption": "Legend enabled",
+            "default_val": true,
+            "doc": "Add legend to chart",
+            "editor": "Checkbox",
+            "name": "legend_enabled",
+            "rank": 41
+        },
+        "ANF": {
+            "caption": "Y-Axis minimum",
+            "default_val": 0,
+            "doc": "Minimum value on Y-Axis",
+            "editor": "DynamicValue",
+            "name": "l_axis_min",
+            "optional": true,
+            "rank": 46,
+            "value": "number"
+        },
+        "ANG": {
+            "caption": "Y-Axis maximum",
+            "doc": "Maximum value on Y-Axis",
+            "editor": "DynamicValue",
+            "name": "l_axis_max",
+            "optional": true,
+            "rank": 47,
+            "value": "number"
+        },
+        "ANJ": {
+            "caption": "Plotting axis",
+            "default_val": "left",
+            "doc": "Axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_1_axis",
+            "options": "left,right",
+            "rank": 18
+        },
+        "ANK": {
+            "caption": "Plotting axis",
+            "default_val": "left",
+            "doc": "Axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_2_axis",
+            "options": "left,right",
+            "rank": 33
+        },
+        "ANn": {
+            "caption": "LAYOUT PROPERTIES",
+            "editor": "Label",
+            "name": "layout_properties",
+            "rank": 45
+        },
+        "ANo": {
+            "caption": "Legend position",
+            "default_val": "bottom",
+            "doc": "Position of legend",
+            "editor": "Dropdown",
+            "name": "legend_position",
+            "optional": true,
+            "options": "top,bottom,left,right",
+            "rank": 42
+        },
+        "ANr": {
+            "caption": "Display Y-Axis",
+            "default_val": true,
+            "doc": "Show Y-Axis",
+            "editor": "Checkbox",
+            "name": "yaxis_show",
+            "rank": 43
+        },
+        "ANs": {
+            "caption": "Display X-Axis",
+            "default_val": true,
+            "doc": "Show X-Axis",
+            "editor": "Checkbox",
+            "name": "xaxis_show",
+            "rank": 44
+        },
+        "ANw": {
+            "caption": "loading_icon",
+            "default_val": true,
+            "doc": "Display a loading icon during loading",
+            "editor": "Checkbox",
+            "name": "loading_icon",
+            "rank": 48
+        },
+        "ANx": {
+            "caption": "loading_icon_color",
+            "default_val": "rgba(83, 91, 148, 1)",
+            "editor": "Color",
+            "name": "loading_icon_color",
+            "rank": 49
+        },
+        "APH": {
+            "caption": "SERIES 3 PROPERTIES",
+            "editor": "Label",
+            "name": "series_3_properties",
+            "rank": 51
+        },
+        "API": {
+            "caption": "Graph type",
+            "default_val": "bar",
+            "doc": "Select type of chart for series",
+            "editor": "Dropdown",
+            "name": "series_3_chart_type",
+            "options": "bar,line",
+            "rank": 53
+        },
+        "APJ": {
+            "caption": "If you are using date data then use ':formatted as' to present it in YYYYMMDD format",
+            "editor": "Label",
+            "name": "chart_stacking_mode",
+            "rank": 54
+        },
+        "APL": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series3_bubble_value",
+            "optional": true,
+            "rank": 56,
+            "value": "number"
+        },
+        "APM": {
+            "caption": "Values data name",
+            "default_val": "Series 3",
+            "doc": "Give series data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_3_data_header",
+            "rank": 57,
+            "value": "text"
+        },
+        "APN": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_3_category_count",
+            "rank": 58
+        },
+        "APO": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_3_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 59
+        },
+        "APP": {
+            "caption": "Plotting axis",
+            "default_val": "left",
+            "doc": "Axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_3_axis",
+            "options": "left,right",
+            "rank": 60
+        },
+        "APQ": {
+            "caption": "Fill color #1",
+            "default_val": "rgba(0, 255, 225, 0.6)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_3_fill_color_1",
+            "optional": true,
+            "rank": 61
+        },
+        "APR": {
+            "caption": "Fill color #2",
+            "default_val": "rgba(0, 255, 225, 0.59)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_3_fill_color_2",
+            "optional": true,
+            "rank": 62
+        },
+        "APS": {
+            "caption": "Line color",
+            "default_val": "rgba(0, 255, 225, 1)",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_3_line_color",
+            "optional": true,
+            "rank": 63
+        },
+        "APT": {
+            "caption": "Line thickness",
+            "default_val": 1,
+            "doc": "Line thickness",
+            "editor": "StaticNumber",
+            "name": "series_3_line_thickness",
+            "optional": true,
+            "rank": 64
+        },
+        "APU": {
+            "caption": "Series 3 enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_3_enabled",
+            "rank": 52
+        },
+        "APV": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_3_bubble_category",
+            "optional": true,
+            "rank": 55,
+            "value": "text"
+        },
+        "APa": {
+            "caption": "Settings profile",
+            "default_val": "Category 1",
+            "doc": "Preset settings",
+            "editor": "Dropdown",
+            "name": "settings",
+            "options": "Time 1,Time 2,Time 3,Category 1,Category 2",
+            "rank": 65
+        },
+        "APb": {
+            "caption": "Bezier control",
+            "default_val": 0.3,
+            "doc": "Line control",
+            "editor": "StaticNumber",
+            "name": "bezier",
+            "rank": 50
+        },
+        "APc": {
+            "caption": "Date offset (min)",
+            "default_val": 7,
+            "doc": "Date offset",
+            "editor": "DynamicValue",
+            "name": "x_axis_min_time",
+            "optional": false,
+            "rank": 66,
+            "value": "number"
+        },
+        "APd": {
+            "caption": "Default to Zero",
+            "default_val": false,
+            "doc": "Default values to zero",
+            "editor": "Checkbox",
+            "name": "inject_zero",
+            "rank": 6
+        }
+    },
+    "icon": "ion-arrow-graph-up-right",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "APq": {
+            "caption": "loaded",
+            "doc": "Moves to yes once loaded",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn false;\n\n}"
+            },
+            "name": "loaded",
+            "value": "boolean"
+        }
+    }
+}

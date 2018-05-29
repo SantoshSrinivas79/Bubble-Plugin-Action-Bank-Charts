@@ -1,0 +1,1464 @@
+{
+    "add_is_visible": true,
+    "autobinding_is_list": false,
+    "autobinding_value": "text",
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 400
+    },
+    "display": "Bar/Line - amCharts",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1496752068603x868586460128426500/blank_PNG.png",
+    "events": {
+        "ALy": {
+            "caption": "chart is clicked",
+            "doc": "Returns category and value information from chart click event",
+            "name": "chart_click"
+        },
+        "AOE": {
+            "caption": "chart is loaded",
+            "doc": "Will trigger when the chart has finished loading",
+            "name": "chart_loaded"
+        }
+    },
+    "fields": {
+        "ADr": {
+            "caption": "DATA PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "chart_data_source",
+            "optional": true,
+            "rank": 0
+        },
+        "ADu": {
+            "caption": "Pick data source",
+            "default_val": "Bubble",
+            "doc": "Choose data source for chart",
+            "editor": "Dropdown",
+            "name": "data_select_data_source",
+            "options": "Google Sheets,Bubble",
+            "rank": 1
+        },
+        "ADv": {
+            "caption": "Google Key",
+            "default_val": "",
+            "doc": "Copy Google Sheets ID here",
+            "editor": "StaticText",
+            "name": "data_source_is_google_spreadsheet_key",
+            "optional": true,
+            "rank": 2
+        },
+        "ADx": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_1_bubble_category",
+            "optional": false,
+            "rank": 14,
+            "value": "text"
+        },
+        "AEA": {
+            "caption": "Category data name",
+            "default_val": "Category name",
+            "doc": "Give category data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "category_header",
+            "rank": 15,
+            "value": "text"
+        },
+        "AED": {
+            "caption": "Chart stacking mode",
+            "default_val": "none",
+            "doc": "Stack series where category values match",
+            "editor": "Dropdown",
+            "name": "chart_stacking_mode",
+            "options": "none,regular,100%",
+            "rank": 7
+        },
+        "AEG": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series1_bubble_value",
+            "optional": true,
+            "rank": 16,
+            "value": "number"
+        },
+        "AEJ": {
+            "caption": "Values data name",
+            "default_val": "Series 1",
+            "doc": "Give series data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_1_data_header",
+            "optional": false,
+            "rank": 17,
+            "value": "text"
+        },
+        "AEM": {
+            "caption": "Graph type",
+            "default_val": "column",
+            "doc": "Select type of chart for series",
+            "editor": "Dropdown",
+            "name": "series_1_chart_type",
+            "options": "column,line,step,smoothedLine",
+            "rank": 12
+        },
+        "AEQ": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_1_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 20
+        },
+        "AET": {
+            "caption": "Series 2 enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_2_enabled",
+            "rank": 31
+        },
+        "AEW": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series2_bubble_value",
+            "optional": true,
+            "rank": 34,
+            "value": "number"
+        },
+        "AEZ": {
+            "caption": "Values data name",
+            "default_val": "Series 2",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_2_data_header",
+            "optional": true,
+            "rank": 35,
+            "value": "text"
+        },
+        "AEc": {
+            "caption": "Graph type",
+            "default_val": "column",
+            "doc": "Select type of chart for series",
+            "editor": "Dropdown",
+            "name": "series_2_chart_type",
+            "optional": true,
+            "options": "column,line,step,smoothedLine",
+            "rank": 32
+        },
+        "AEf": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_2_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 38
+        },
+        "AEi": {
+            "caption": "Format data as dates",
+            "default_val": false,
+            "doc": "Parse values as date data",
+            "editor": "Checkbox",
+            "name": "category_date_formatting_enabled",
+            "rank": 4
+        },
+        "AEl": {
+            "caption": "Data export",
+            "default_val": false,
+            "doc": "Data export options",
+            "editor": "Checkbox",
+            "name": "data_export_available",
+            "rank": 10
+        },
+        "AEo": {
+            "caption": "Interval refresh",
+            "default_val": false,
+            "doc": "Auto-refresh after defined interval",
+            "editor": "Checkbox",
+            "name": "interval_refresh_enabled",
+            "rank": 8
+        },
+        "AEr": {
+            "caption": "Refresh interval (s)",
+            "default_val": 10,
+            "doc": "Auto-refresh after defined interval",
+            "editor": "StaticNumber",
+            "name": "interval_refresh",
+            "optional": true,
+            "rank": 9
+        },
+        "AEu": {
+            "caption": "STYLE & LAYOUT PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "chart_styling",
+            "optional": true,
+            "rank": 48
+        },
+        "AEx": {
+            "caption": "Chart overall theme",
+            "default_val": "light",
+            "doc": "Theme controls wide range of chart settings",
+            "editor": "Dropdown",
+            "name": "chart_color_overall_theme",
+            "options": "none,light,dark,black,chalk",
+            "rank": 49
+        },
+        "AFA": {
+            "caption": "Animation type",
+            "default_val": "bounce",
+            "doc": "Loading animation options",
+            "editor": "Dropdown",
+            "name": "styling_animation_type",
+            "options": "easeOutSine,easeInSine,elastic,bounce,none",
+            "rank": 53
+        },
+        "AFD": {
+            "caption": "Animation Duration",
+            "default_val": 2,
+            "doc": "Length of loading animation",
+            "editor": "StaticNumber",
+            "name": "styling_animation_duration",
+            "optional": true,
+            "rank": 54
+        },
+        "AFG": {
+            "caption": "Animate in sequence",
+            "default_val": true,
+            "doc": "Animate all series at once, or one-by-one",
+            "editor": "Checkbox",
+            "name": "styling_animation_sequence",
+            "rank": 55
+        },
+        "AFJ": {
+            "caption": "3D depth",
+            "default_val": 0,
+            "doc": "Controls 3D depth",
+            "editor": "StaticNumber",
+            "name": "styling_3d_depth",
+            "optional": true,
+            "rank": 56
+        },
+        "AFM": {
+            "caption": "3D angle",
+            "default_val": 30,
+            "doc": "Controls angle of 3D effect",
+            "editor": "StaticNumber",
+            "name": "styling_3d_angle",
+            "optional": true,
+            "rank": 57
+        },
+        "AFP": {
+            "caption": "SERIES 1 PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "series_1_properties",
+            "optional": true,
+            "rank": 11
+        },
+        "AFS": {
+            "caption": "Fill color",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_1_fill_color",
+            "optional": true,
+            "rank": 21
+        },
+        "AFV": {
+            "caption": "If you are using date data then use ':formatted as' to present it in 'yyyy mm dd' format",
+            "doc": "Fill transparency",
+            "editor": "Label",
+            "name": "series_1_fill_opacity",
+            "optional": true,
+            "options": ",0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1",
+            "rank": 13
+        },
+        "AFY": {
+            "caption": "Color data: Google",
+            "doc": "For Google data - select a column header to control series color (should be hex codes)",
+            "editor": "StaticText",
+            "is_list": false,
+            "name": "series_1_color_field",
+            "optional": true,
+            "rank": 27,
+            "value": "text"
+        },
+        "AFb": {
+            "caption": "Line dash length",
+            "doc": "Line dash length",
+            "editor": "StaticNumber",
+            "name": "series_1_line_dash_length",
+            "optional": true,
+            "rank": 24
+        },
+        "AFe": {
+            "caption": "Line color",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_1_line_color",
+            "optional": true,
+            "rank": 22
+        },
+        "AFk": {
+            "caption": "Line thickness",
+            "doc": "Line thickness",
+            "editor": "StaticNumber",
+            "name": "series_1_line_thickness",
+            "optional": true,
+            "rank": 23
+        },
+        "AFn": {
+            "caption": "Bullet type",
+            "doc": "Bullets for each data point",
+            "editor": "Dropdown",
+            "name": "series_1_bullet_type",
+            "optional": true,
+            "options": "round,square,triangleUp,triangleDown,bubble",
+            "rank": 25
+        },
+        "AFq": {
+            "caption": "Bullet size",
+            "default_val": 10,
+            "doc": "Size of bullets",
+            "editor": "StaticNumber",
+            "name": "series_1_bullet_size",
+            "optional": true,
+            "rank": 26
+        },
+        "AFt": {
+            "caption": "Balloon labels",
+            "default_val": true,
+            "doc": "Enable balloon labelling for series",
+            "editor": "Checkbox",
+            "name": "series_1_label_balloon_enabled",
+            "rank": 29
+        },
+        "AFw": {
+            "caption": "SERIES 2 PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "SERIES 2 PROPERTIES",
+            "optional": true,
+            "rank": 30
+        },
+        "AFz": {
+            "caption": "Fill color",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_2_fill_color",
+            "optional": true,
+            "rank": 39
+        },
+        "AGF": {
+            "caption": "Color data: Google",
+            "doc": "For Google data - select a column header to control series color (should be hex codes)",
+            "editor": "StaticText",
+            "name": "series_2_color_field",
+            "optional": true,
+            "rank": 46
+        },
+        "AGI": {
+            "caption": "Line dash length",
+            "doc": "Line dash length",
+            "editor": "StaticNumber",
+            "name": "series_2_line_dash_length",
+            "optional": true,
+            "rank": 42
+        },
+        "AGL": {
+            "caption": "Line color",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_2_line_color",
+            "optional": true,
+            "rank": 40
+        },
+        "AGR": {
+            "caption": "Line thickness",
+            "doc": "Line thickness",
+            "editor": "StaticNumber",
+            "name": "series_2_line_thickness",
+            "optional": true,
+            "rank": 41
+        },
+        "AGV": {
+            "caption": "Bullet type",
+            "doc": "Bullets for each data point",
+            "editor": "Dropdown",
+            "name": "series_2_bullet_type",
+            "optional": true,
+            "options": "round,square,triangleUp,triangleDown,bubble",
+            "rank": 43
+        },
+        "AGY": {
+            "caption": "Balloon labels",
+            "default_val": true,
+            "doc": "Enable balloon labelling for series",
+            "editor": "Checkbox",
+            "name": "series_2_label_balloon_enabled",
+            "rank": 47
+        },
+        "AGb": {
+            "caption": "VERTICAL AXIS PROPERTIES (LEFT)",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "value_axis_left-properties",
+            "optional": true,
+            "rank": 71
+        },
+        "AGh": {
+            "caption": "Labels enabled",
+            "default_val": true,
+            "doc": "Show y-axis labels",
+            "editor": "Checkbox",
+            "name": "value_axis_labels_enabled",
+            "rank": 76
+        },
+        "AGk": {
+            "caption": "Labels color",
+            "doc": "y-axis labels color",
+            "editor": "Color",
+            "name": "value_axis_labels_color",
+            "optional": true,
+            "rank": 77
+        },
+        "AGn": {
+            "caption": "Labels unit",
+            "doc": "Add unit of measurement to y-axis labels",
+            "editor": "StaticText",
+            "name": "value_axis_labels_unit_label",
+            "optional": true,
+            "rank": 78
+        },
+        "AGo": {
+            "caption": "Labels unit position",
+            "default_val": "left",
+            "doc": "Position unit before or after y-axis label",
+            "editor": "Dropdown",
+            "name": "value_axis_labels_unit_position",
+            "options": "left,right",
+            "rank": 79
+        },
+        "AGq": {
+            "caption": "Labels offset (px)",
+            "doc": "Spacing between labels and y-axis",
+            "editor": "StaticNumber",
+            "name": "value_axis_distance_offset",
+            "optional": true,
+            "rank": 80
+        },
+        "AGt": {
+            "caption": "Line color",
+            "doc": "Color of y-axis",
+            "editor": "Color",
+            "name": "value_axis_axis_line_color",
+            "optional": true,
+            "rank": 74
+        },
+        "AGw": {
+            "caption": "Line thickness",
+            "doc": "Thickness of Y-axis line",
+            "editor": "StaticNumber",
+            "name": "value_axis_axis_line_thickness",
+            "optional": true,
+            "rank": 75
+        },
+        "AHC": {
+            "caption": "Horiz line color",
+            "doc": "Introduce grid lines up from y-axis",
+            "editor": "Color",
+            "name": "value_axis_grid_line_color",
+            "optional": true,
+            "rank": 94
+        },
+        "AHF": {
+            "caption": "Horiz line thickness",
+            "doc": "Thickness of grid lines up from y-axis",
+            "editor": "StaticNumber",
+            "name": "value_axis_grid_line_thickness",
+            "optional": true,
+            "rank": 95
+        },
+        "AHL": {
+            "caption": "Horiz dash length",
+            "doc": "Dash length of grid up from y-axis",
+            "editor": "StaticNumber",
+            "name": "value_axis_grid_line_dash_length",
+            "optional": true,
+            "rank": 96
+        },
+        "AHO": {
+            "caption": "Horiz fill color",
+            "doc": "Alternately fill each grid module",
+            "editor": "Color",
+            "name": "value_axis_alternate_fill_color",
+            "optional": true,
+            "rank": 97
+        },
+        "AHU": {
+            "caption": "HORIZONTAL AXIS PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "category_axis_properties",
+            "optional": true,
+            "rank": 81
+        },
+        "AHX": {
+            "caption": "Axis position",
+            "default_val": "bottom",
+            "doc": "Position axis at top or bottom of chart",
+            "editor": "Dropdown",
+            "name": "category_axis_position",
+            "options": "top,bottom",
+            "rank": 82
+        },
+        "AHa": {
+            "caption": "Labels offset distance",
+            "doc": "Add unit of measurement to x-axis labels",
+            "editor": "StaticNumber",
+            "name": "category_axis_distance_offset",
+            "optional": true,
+            "rank": 88
+        },
+        "AHd": {
+            "caption": "Labels rotation",
+            "doc": "Rotate labels on x-axis",
+            "editor": "StaticNumber",
+            "name": "category_axis_label_rotation",
+            "optional": true,
+            "rank": 86
+        },
+        "AHg": {
+            "caption": "Line color",
+            "doc": "Color of x-axis",
+            "editor": "Color",
+            "name": "category_axis_axis_line_color",
+            "optional": true,
+            "rank": 83
+        },
+        "AHj": {
+            "caption": "Line thickness",
+            "doc": "Thickness of x-axis",
+            "editor": "StaticNumber",
+            "name": "category_axis_axis_line_thickness",
+            "optional": true,
+            "rank": 84
+        },
+        "AHp": {
+            "caption": "Vert line color",
+            "doc": "Color of grid introduced from x-axis",
+            "editor": "Color",
+            "name": "category_axis_grid_line_color",
+            "optional": true,
+            "rank": 98
+        },
+        "AHs": {
+            "caption": "Vert line thickness",
+            "doc": "Thickness of gridlines introduced from x-axis",
+            "editor": "StaticNumber",
+            "name": "category_axis_grid_line_thickness",
+            "optional": true,
+            "rank": 99
+        },
+        "AHy": {
+            "caption": "Vert dash length",
+            "doc": "Length of dashes on x-axis gridlines",
+            "editor": "StaticNumber",
+            "name": "category_axis_grid_line_dash_length",
+            "optional": true,
+            "rank": 100
+        },
+        "AIB": {
+            "caption": "Vert fill color",
+            "doc": "Alternately fill each grid module",
+            "editor": "Color",
+            "name": "category_axis_alternate_fill_color",
+            "optional": true,
+            "rank": 101
+        },
+        "AIK": {
+            "caption": "VERTICAL AXIS PROPERTIES (RIGHT)",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "value_axis_right-properties",
+            "rank": 89
+        },
+        "AIN": {
+            "caption": "Line color",
+            "doc": "Color of second y-axis line",
+            "editor": "Color",
+            "name": "value_axis_right_line_color",
+            "optional": true,
+            "rank": 90
+        },
+        "AIQ": {
+            "caption": "Unit label",
+            "doc": "Add unit of measurement to y-axis labels",
+            "editor": "StaticText",
+            "name": "value_axis_right_labels_unit_label",
+            "optional": true,
+            "rank": 91
+        },
+        "AIT": {
+            "caption": "Labels unit position",
+            "default_val": "left",
+            "doc": "Position unit before or after value",
+            "editor": "Dropdown",
+            "name": "value_axis_right_labels_unit_position",
+            "optional": true,
+            "options": "left,right",
+            "rank": 92
+        },
+        "AIZ": {
+            "caption": "Legend enabled",
+            "default_val": false,
+            "doc": "Add legend to chart",
+            "editor": "Checkbox",
+            "name": "legend_enabled",
+            "rank": 59
+        },
+        "AIc": {
+            "caption": "Legend position",
+            "default_val": "right",
+            "doc": "Position of legend",
+            "editor": "Dropdown",
+            "name": "legend_position",
+            "optional": true,
+            "options": "bottom,left,right,top",
+            "rank": 60
+        },
+        "AIf": {
+            "caption": "Legend hover emphasis",
+            "default_val": "1",
+            "doc": "Change reaction of legend on rollover",
+            "editor": "Dropdown",
+            "name": "legend_rollover",
+            "optional": true,
+            "options": "0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1",
+            "rank": 61
+        },
+        "AIi": {
+            "caption": "Balloon label text",
+            "default_val": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span>",
+            "doc": "Customise balloon labelling using this HTML",
+            "editor": "StaticText",
+            "long_text": true,
+            "name": "balloon_text",
+            "optional": true,
+            "rank": 62
+        },
+        "AIl": {
+            "caption": "Scrollbar enabled",
+            "default_val": false,
+            "doc": "Introduce horizontal scroll and zoom feature",
+            "editor": "Checkbox",
+            "name": "scrollbar_enabled",
+            "rank": 63
+        },
+        "AIo": {
+            "caption": "Scrollbar Series",
+            "default_val": "Series 1",
+            "doc": "Select series to feature in scroll bar",
+            "editor": "Dropdown",
+            "name": "scrollbar_series",
+            "optional": true,
+            "options": "None,Series 1,Series 2,Series 3,Series 4,Series 5,Series 6,Series 7,Series 8",
+            "rank": 64
+        },
+        "AIr": {
+            "caption": "Scrollbar height",
+            "default_val": 40,
+            "doc": "Set height of scollbar area",
+            "editor": "StaticNumber",
+            "name": "scrollbar_height",
+            "optional": true,
+            "rank": 65
+        },
+        "AIu": {
+            "caption": "Scrollbar position",
+            "default_val": "Above chart",
+            "doc": "Set position of scrollbar area",
+            "editor": "Dropdown",
+            "name": "scrollbar_position",
+            "optional": true,
+            "options": "Above chart,Below chart",
+            "rank": 66
+        },
+        "AIx": {
+            "caption": "Scrollbar offset",
+            "default_val": 0,
+            "doc": "Offset distance between chart and scrollbar",
+            "editor": "StaticNumber",
+            "name": "scrollbar_offset",
+            "optional": true,
+            "rank": 67
+        },
+        "AJA": {
+            "caption": ".",
+            "doc": "Show a precision cursor when hovered over chart",
+            "editor": "Label",
+            "name": "cursor_enabled",
+            "rank": 68
+        },
+        "AJD": {
+            "caption": ".",
+            "doc": "Control color of hover cursor over chart",
+            "editor": "Label",
+            "name": "cursor_color",
+            "optional": true,
+            "rank": 69
+        },
+        "AJG": {
+            "caption": ".",
+            "doc": "Control transparency of cursor over chart",
+            "editor": "Label",
+            "name": "cursor_opacity",
+            "optional": true,
+            "options": ",0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1",
+            "rank": 70
+        },
+        "AJM": {
+            "caption": "Enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_3_enabled",
+            "rank": 103
+        },
+        "AJP": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series3_bubble_value",
+            "optional": true,
+            "rank": 105,
+            "value": "number"
+        },
+        "AJS": {
+            "caption": "Values data name",
+            "default_val": "Series 3",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_3_data_header",
+            "optional": true,
+            "rank": 106,
+            "value": "text"
+        },
+        "AJV": {
+            "caption": "Shared settings",
+            "default_val": "Series 1",
+            "doc": "Copies settings from a master series - either Series 1 or 2",
+            "editor": "Dropdown",
+            "name": "series_3_settings",
+            "optional": true,
+            "options": "Series 1,Series 2",
+            "rank": 110
+        },
+        "AJY": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_3_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 111
+        },
+        "AJb": {
+            "caption": "Enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_4_enabled",
+            "rank": 113
+        },
+        "AJe": {
+            "caption": "Values data name",
+            "default_val": "Series 4",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_4_data_header",
+            "optional": true,
+            "rank": 116,
+            "value": "text"
+        },
+        "AJh": {
+            "caption": "Shared settings",
+            "default_val": "Series 1",
+            "doc": "Copies settings from a master series - either Series 1 or 2",
+            "editor": "Dropdown",
+            "name": "series_4_settings",
+            "optional": true,
+            "options": "Series 1,Series 2",
+            "rank": 120
+        },
+        "AJk": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series4_bubble_value",
+            "optional": true,
+            "rank": 115,
+            "value": "number"
+        },
+        "AJo": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_4_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 121
+        },
+        "AJr": {
+            "caption": "Enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_5_enabled",
+            "rank": 123
+        },
+        "AJu": {
+            "caption": "Values data name",
+            "default_val": "Series 5",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_5_data_header",
+            "optional": true,
+            "rank": 126,
+            "value": "text"
+        },
+        "AJx": {
+            "caption": "Shared settings",
+            "default_val": "Series 1",
+            "doc": "Copies settings from a master series - either Series 1 or 2",
+            "editor": "Dropdown",
+            "name": "series_5_settings",
+            "optional": true,
+            "options": "Series 1,Series 2",
+            "rank": 130
+        },
+        "AKA": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series5_bubble_value",
+            "optional": true,
+            "rank": 125,
+            "value": "number"
+        },
+        "AKD": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_5_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 131
+        },
+        "AKG": {
+            "caption": "Enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_6_enabled",
+            "optional": true,
+            "rank": 133
+        },
+        "AKJ": {
+            "caption": "Values data name",
+            "default_val": "Series 6",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_6_data_header",
+            "optional": true,
+            "rank": 136,
+            "value": "text"
+        },
+        "AKM": {
+            "caption": "Shared settings",
+            "default_val": "Series 1",
+            "doc": "Copies settings from a master series - either Series 1 or 2",
+            "editor": "Dropdown",
+            "name": "series_6_settings",
+            "optional": true,
+            "options": "Series 1,Series 2",
+            "rank": 140
+        },
+        "AKP": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series6_bubble_value",
+            "optional": true,
+            "rank": 135,
+            "value": "number"
+        },
+        "AKS": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_6_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 141
+        },
+        "AKV": {
+            "caption": "Enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_7_enabled",
+            "optional": true,
+            "rank": 143
+        },
+        "AKW": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series7_bubble_value",
+            "optional": true,
+            "rank": 145,
+            "value": "number"
+        },
+        "AKY": {
+            "caption": "Shared settings",
+            "default_val": "Series 1",
+            "doc": "Copies settings from a master series - either Series 1 or 2",
+            "editor": "Dropdown",
+            "name": "series_7_settings",
+            "optional": true,
+            "options": "Series 1,Series 2",
+            "rank": 150
+        },
+        "AKb": {
+            "caption": "Values data name",
+            "default_val": "Series 7",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "is_list": false,
+            "name": "series7_data_header",
+            "optional": true,
+            "rank": 146,
+            "value": "text"
+        },
+        "AKe": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_7_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 151
+        },
+        "AKh": {
+            "caption": "Enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_8_enabled",
+            "rank": 153
+        },
+        "AKk": {
+            "caption": "Values data name",
+            "default_val": "Series 8",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_8_data_header",
+            "optional": true,
+            "rank": 156,
+            "value": "text"
+        },
+        "AKn": {
+            "caption": "Shared settings",
+            "default_val": "Series 1",
+            "doc": "Copies settings from a master series - either Series 1 or 2",
+            "editor": "Dropdown",
+            "name": "series_8_settings",
+            "optional": true,
+            "options": "Series 1,Series 2",
+            "rank": 160
+        },
+        "AKq": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series8_bubble_value",
+            "optional": true,
+            "rank": 155,
+            "value": "number"
+        },
+        "AKt": {
+            "caption": "Plotting axis",
+            "default_val": "Left axis",
+            "doc": "Select axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_8_axis_to_plot_series_on",
+            "optional": true,
+            "options": "Left axis,Right axis",
+            "rank": 161
+        },
+        "AKv": {
+            "caption": "Color data: Bubble",
+            "doc": "For Bubble data - select a list to control series color",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_2_bubble_color_field",
+            "optional": true,
+            "rank": 45,
+            "value": "text"
+        },
+        "AKw": {
+            "caption": "Color data: Bubble",
+            "doc": "For Bubble data - select a list to control series color",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_1_bubble_color_field",
+            "optional": true,
+            "rank": 28,
+            "value": "text"
+        },
+        "AKy": {
+            "caption": "Enable data grouping",
+            "default_val": false,
+            "doc": "Group and merge matching category values",
+            "editor": "Checkbox",
+            "name": "data_merge_enabled",
+            "rank": 5
+        },
+        "ALA": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_1_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 19
+        },
+        "ALB": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_2_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 37
+        },
+        "ALC": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_3_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 107
+        },
+        "ALD": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_4_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 117
+        },
+        "ALE": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_5_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 127
+        },
+        "ALF": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_6_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 137
+        },
+        "ALG": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_7_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 147
+        },
+        "ALH": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_8_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 157
+        },
+        "ALI": {
+            "caption": "Bullet size",
+            "default_val": 10,
+            "doc": "Bullet size",
+            "editor": "StaticNumber",
+            "name": "series_2_bullet_size",
+            "optional": true,
+            "rank": 44
+        },
+        "ALJ": {
+            "caption": "Google Sheet #",
+            "doc": "Reference number for worksheet within Google Sheet",
+            "editor": "StaticNumber",
+            "name": "data_source_is_google_spreadsheet_sheet",
+            "optional": true,
+            "rank": 3
+        },
+        "ALS": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_2_bubble_category",
+            "optional": true,
+            "rank": 33,
+            "value": "text"
+        },
+        "ALT": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_3_bubble_category",
+            "optional": true,
+            "rank": 104,
+            "value": "text"
+        },
+        "ALU": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_4_bubble_category",
+            "optional": true,
+            "rank": 114,
+            "value": "text"
+        },
+        "ALV": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_5_bubble_category",
+            "optional": true,
+            "rank": 124,
+            "value": "text"
+        },
+        "ALW": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_6_bubble_category",
+            "optional": true,
+            "rank": 134,
+            "value": "text"
+        },
+        "ALX": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_7_bubble_category",
+            "optional": true,
+            "rank": 144,
+            "value": "text"
+        },
+        "ALY": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_8_bubble_category",
+            "optional": true,
+            "rank": 154,
+            "value": "text"
+        },
+        "ALd": {
+            "caption": "Time period grouping",
+            "doc": "Consolidate data based on a time interval",
+            "editor": "Dropdown",
+            "name": "data_time_rollup",
+            "optional": true,
+            "options": "Week,Month,Year",
+            "rank": 6
+        },
+        "ALk": {
+            "caption": "Labels enabled",
+            "default_val": true,
+            "doc": "Show x-axis labels",
+            "editor": "Checkbox",
+            "name": "category_axis_labels_enabled",
+            "optional": true,
+            "rank": 85
+        },
+        "ALl": {
+            "caption": "Labels color",
+            "doc": "Color of labels on x-axis",
+            "editor": "Color",
+            "name": "category_axis_labels_color",
+            "optional": true,
+            "rank": 87
+        },
+        "ALo": {
+            "caption": "Minimum value",
+            "doc": "Set minimum value for axis",
+            "editor": "StaticNumber",
+            "name": "value_axis_minimum",
+            "optional": true,
+            "rank": 72
+        },
+        "ALp": {
+            "caption": "Maximum value",
+            "doc": "Set maximum value for axis",
+            "editor": "StaticNumber",
+            "name": "value_axis_maximum",
+            "optional": true,
+            "rank": 73
+        },
+        "ALq": {
+            "caption": "GRID PROPERTIES",
+            "editor": "Label",
+            "name": "grid_properties",
+            "rank": 93
+        },
+        "ALr": {
+            "caption": "SERIES 3 PROPERTIES",
+            "editor": "Label",
+            "name": "series_3",
+            "rank": 102
+        },
+        "ALs": {
+            "caption": "SERIES 4 PROPERTIES",
+            "editor": "Label",
+            "name": "series_4",
+            "rank": 112
+        },
+        "ALt": {
+            "caption": "SERIES 5 PROPERTIES",
+            "editor": "Label",
+            "name": "series_5_properties",
+            "rank": 122
+        },
+        "ALu": {
+            "caption": "SERIES 6 PROPERTIES",
+            "editor": "Label",
+            "name": "series_6_properties",
+            "rank": 132
+        },
+        "ALv": {
+            "caption": "SERIES 7 PROPERTIES",
+            "editor": "Label",
+            "name": "series_7_properties",
+            "rank": 142
+        },
+        "ALw": {
+            "caption": "SERIES 8 PROPERTIES",
+            "editor": "Label",
+            "name": "series_8_properties",
+            "rank": 152
+        },
+        "AMF": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_1_category_count",
+            "rank": 18
+        },
+        "AMG": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_2_category_count",
+            "rank": 36
+        },
+        "AMH": {
+            "caption": "Loading graphic",
+            "default_val": true,
+            "doc": "Display a loading graphic on chart load",
+            "editor": "Checkbox",
+            "name": "loading_icon",
+            "rank": 51
+        },
+        "AMI": {
+            "caption": "Loading graphic color",
+            "default_val": "rgba(0, 0, 0, 1)",
+            "doc": "Change color of loading graphic",
+            "editor": "Color",
+            "name": "loading_icon_color",
+            "optional": true,
+            "rank": 52
+        },
+        "ANU": {
+            "caption": "Fill color",
+            "doc": "Series fill color",
+            "editor": "Color",
+            "name": "series_3_fill_color",
+            "optional": true,
+            "rank": 108
+        },
+        "ANV": {
+            "caption": "Fill color",
+            "doc": "Series fill color",
+            "editor": "Color",
+            "name": "series_4_fill_color",
+            "optional": true,
+            "rank": 118
+        },
+        "ANW": {
+            "caption": "Fill color",
+            "doc": "Series fill color",
+            "editor": "Color",
+            "name": "series_5_fill_color",
+            "optional": true,
+            "rank": 128
+        },
+        "ANX": {
+            "caption": "Fill color",
+            "doc": "Series fill color",
+            "editor": "Color",
+            "name": "series_6_fill_color",
+            "optional": true,
+            "rank": 138
+        },
+        "ANY": {
+            "caption": "Fill color",
+            "doc": "Series fill color",
+            "editor": "Color",
+            "name": "series_7_fill_color",
+            "optional": true,
+            "rank": 148
+        },
+        "ANZ": {
+            "caption": "Fill color",
+            "doc": "Series fill color",
+            "editor": "Color",
+            "name": "series_8_fill_color",
+            "optional": true,
+            "rank": 158
+        },
+        "ANp": {
+            "caption": "Chart orientation",
+            "default_val": "Vertical",
+            "doc": "Choose a vertical or horizontal orientation",
+            "editor": "Dropdown",
+            "name": "chart_rotate",
+            "options": "Vertical,Horizontal",
+            "rank": 50
+        },
+        "ANy": {
+            "caption": "Line color",
+            "doc": "Sets line color for the new series",
+            "editor": "Color",
+            "name": "series_3_line_color",
+            "optional": true,
+            "rank": 109
+        },
+        "ANz": {
+            "caption": "Line color",
+            "doc": "Sets line color for the new series",
+            "editor": "Color",
+            "name": "series_4_line_color",
+            "optional": true,
+            "rank": 119
+        },
+        "AOA": {
+            "caption": "Line color",
+            "doc": "Sets line color for the new series",
+            "editor": "Color",
+            "name": "series_5_line_color",
+            "optional": true,
+            "rank": 129
+        },
+        "AOB": {
+            "caption": "Line color",
+            "doc": "Sets line color for the new series",
+            "editor": "Color",
+            "name": "series_6_line_color",
+            "optional": true,
+            "rank": 139
+        },
+        "AOC": {
+            "caption": "Line color",
+            "doc": "Sets line color for the new series",
+            "editor": "Color",
+            "name": "series_7_line_color",
+            "optional": true,
+            "rank": 149
+        },
+        "AOD": {
+            "caption": "Line color",
+            "doc": "Sets line color for the new series",
+            "editor": "Color",
+            "name": "series_8_line_color",
+            "optional": true,
+            "rank": 159
+        },
+        "AOG": {
+            "caption": "Decimal places",
+            "default_val": 0,
+            "editor": "StaticNumber",
+            "name": "data_decimal_places",
+            "rank": 58
+        }
+    },
+    "icon": "ion-arrow-graph-up-right",
+    "property_applications": {
+        "Font": false,
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ALj": {
+            "caption": "loaded",
+            "doc": "Sets custom state loaded to 'yes' once chart has loaded",
+            "name": "loaded",
+            "value": "boolean"
+        },
+        "ALz": {
+            "caption": "Click category",
+            "doc": "Sets custom state 'Click category' to category value of click",
+            "name": "click_category",
+            "value": "text"
+        },
+        "AMA": {
+            "caption": "Click value",
+            "doc": "Sets custom state 'Click value' to value of click",
+            "name": "click_value",
+            "value": "number"
+        }
+    },
+    "support_autobinding": false
+}

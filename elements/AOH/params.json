@@ -1,0 +1,488 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 400
+    },
+    "display": "Radar - chart.js T",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1522705016370x890754329040646500/blank_PNG.png",
+    "fields": {
+        "AOI": {
+            "caption": "DATA PROPERTIES",
+            "editor": "Label",
+            "name": "data_properties",
+            "rank": 0
+        },
+        "AOK": {
+            "caption": "Enable data grouping",
+            "default_val": true,
+            "doc": "Group and merge matching category values",
+            "editor": "Checkbox",
+            "name": "data_merge_enabled",
+            "rank": 1
+        },
+        "AOL": {
+            "caption": "SERIES 1 PROPERTIES",
+            "editor": "Label",
+            "name": "series_1_properties",
+            "rank": 3
+        },
+        "AOM": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_1_bubble_category",
+            "rank": 4,
+            "value": "text"
+        },
+        "AOO": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series1_bubble_value",
+            "optional": true,
+            "rank": 5,
+            "value": "number"
+        },
+        "AOP": {
+            "caption": "Values data name",
+            "default_val": "Series 1",
+            "doc": "Give series data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_1_data_header",
+            "rank": 6,
+            "value": "text"
+        },
+        "AOQ": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_1_category_count",
+            "rank": 7
+        },
+        "AOR": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_1_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 8
+        },
+        "AOS": {
+            "caption": "Plotting axis",
+            "default_val": "left",
+            "doc": "Axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_1_axis",
+            "options": "left,right",
+            "rank": 9
+        },
+        "AOT": {
+            "caption": "Fill color #1",
+            "default_val": "rgba(1, 21, 38, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_1_fill_color_1",
+            "optional": true,
+            "rank": 10
+        },
+        "AOU": {
+            "caption": "Fill color #2",
+            "default_val": "rgba(1, 21, 38, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_1_fill_color_2",
+            "optional": true,
+            "rank": 11
+        },
+        "AOV": {
+            "caption": "Line color",
+            "default_val": "rgba(1, 22, 39, 1)",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_1_line_color",
+            "optional": true,
+            "rank": 12
+        },
+        "AOW": {
+            "caption": "Category headers",
+            "doc": "Give category data a name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "category_header",
+            "rank": 2,
+            "value": "text"
+        },
+        "AOX": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 13
+        },
+        "AOY": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 14
+        },
+        "AOZ": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 15
+        },
+        "AOa": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 16
+        },
+        "AOb": {
+            "caption": "SERIES 2 PROPERTIES",
+            "editor": "Label",
+            "name": "series_2_properties",
+            "rank": 17
+        },
+        "AOc": {
+            "caption": "Series 2 enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_2_enabled",
+            "rank": 18
+        },
+        "AOd": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_2_bubble_category",
+            "optional": true,
+            "rank": 19,
+            "value": "text"
+        },
+        "AOe": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series2_bubble_value",
+            "optional": true,
+            "rank": 20,
+            "value": "number"
+        },
+        "AOf": {
+            "caption": "Values data name",
+            "default_val": "Series 2",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_2_data_header",
+            "optional": true,
+            "rank": 21,
+            "value": "text"
+        },
+        "AOg": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_2_category_count",
+            "rank": 22
+        },
+        "AOh": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_2_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 23
+        },
+        "AOi": {
+            "caption": "Plotting axis",
+            "default_val": "left",
+            "doc": "Axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_2_axis",
+            "options": "left,right",
+            "rank": 24
+        },
+        "AOj": {
+            "caption": "Fill color",
+            "default_val": "rgba(255, 196, 0, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_2_fill_color_1",
+            "optional": true,
+            "rank": 25
+        },
+        "AOk": {
+            "caption": "Fill color",
+            "default_val": "rgba(255, 196, 0, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_2_fill_color_2",
+            "optional": true,
+            "rank": 26
+        },
+        "AOl": {
+            "caption": "Line color",
+            "default_val": "rgba(255, 196, 0, 1)",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_2_line_color",
+            "optional": true,
+            "rank": 27
+        },
+        "AOm": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 28
+        },
+        "AOn": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 29
+        },
+        "AOo": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 30
+        },
+        "AOp": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 31
+        },
+        "AOq": {
+            "caption": ".",
+            "editor": "Label",
+            "name": ".",
+            "rank": 32
+        },
+        "AOr": {
+            "caption": "SERIES 3 PROPERTIES",
+            "editor": "Label",
+            "name": "series_3_properties",
+            "rank": 33
+        },
+        "AOs": {
+            "caption": "Series 3 enabled",
+            "default_val": false,
+            "doc": "Enable this additional series",
+            "editor": "Checkbox",
+            "name": "series_3_enabled",
+            "rank": 34
+        },
+        "AOt": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_3_bubble_category",
+            "optional": true,
+            "rank": 35,
+            "value": "text"
+        },
+        "AOu": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series3_bubble_value",
+            "optional": true,
+            "rank": 36,
+            "value": "number"
+        },
+        "AOv": {
+            "caption": "Values data name",
+            "default_val": "Series 3",
+            "doc": "Give category data an name (must match column data header if using Google Sheet)",
+            "editor": "DynamicValue",
+            "name": "series_3_data_header",
+            "optional": true,
+            "rank": 37,
+            "value": "text"
+        },
+        "AOw": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "series_3_category_count",
+            "rank": 38
+        },
+        "AOx": {
+            "caption": "Data grouping mode",
+            "default_val": "Sum",
+            "doc": "Select data rollup mode for series",
+            "editor": "Dropdown",
+            "name": "series_3_grouping_mode",
+            "options": "Sum,Average,Cumulative,Minimum,Maximum",
+            "rank": 39
+        },
+        "AOy": {
+            "caption": "Plotting axis",
+            "default_val": "left",
+            "doc": "Axis to plot series on",
+            "editor": "Dropdown",
+            "name": "series_3_axis",
+            "options": "left,right",
+            "rank": 40
+        },
+        "AOz": {
+            "caption": "Fill color #1",
+            "default_val": "rgba(97, 99, 161, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_3_fill_color_1",
+            "optional": true,
+            "rank": 41
+        },
+        "APA": {
+            "caption": "Fill color #2",
+            "default_val": "rgba(97, 99, 161, 1)",
+            "doc": "Fill color",
+            "editor": "Color",
+            "name": "series_3_fill_color_2",
+            "rank": 42
+        },
+        "APB": {
+            "caption": "Line color",
+            "default_val": "rgba(97, 99, 161, 1)",
+            "doc": "Line color",
+            "editor": "Color",
+            "name": "series_3_line_color",
+            "rank": 43
+        },
+        "APC": {
+            "caption": "CHART STYLING",
+            "editor": "Label",
+            "name": "chart_styling",
+            "rank": 44
+        },
+        "APD": {
+            "caption": "Loading icon",
+            "default_val": false,
+            "doc": "Show loading icon",
+            "editor": "Checkbox",
+            "name": "loading_icon",
+            "rank": 45
+        },
+        "APE": {
+            "caption": "Loading icon color",
+            "default_val": "rgba(107, 107, 107, 1)",
+            "doc": "Loading icon color",
+            "editor": "Color",
+            "name": "loading_icon_color",
+            "rank": 46
+        },
+        "APe": {
+            "caption": "Max value",
+            "default_val": 100,
+            "doc": "Set maximum value",
+            "editor": "DynamicValue",
+            "name": "max",
+            "optional": true,
+            "rank": 47,
+            "value": "number"
+        },
+        "APg": {
+            "caption": "Step size",
+            "default_val": 100,
+            "doc": "Set step size",
+            "editor": "DynamicValue",
+            "name": "step",
+            "optional": true,
+            "rank": 48,
+            "value": "number"
+        },
+        "APi": {
+            "caption": "Show outer labels",
+            "default_val": true,
+            "doc": "Show outer labels",
+            "editor": "Checkbox",
+            "name": "label_toggle",
+            "rank": 49
+        },
+        "APj": {
+            "caption": "data_source_select",
+            "default_val": "Bubble",
+            "doc": "Bubble",
+            "editor": "Dropdown",
+            "name": "data_select_data_source",
+            "options": "Bubble",
+            "rank": 50
+        }
+    },
+    "icon": "ion-android-checkbox-outline",
+    "property_applications": {
+        "Font": false,
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "APF": {
+            "caption": "tooltip-body",
+            "doc": "body",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-body",
+            "value": "text"
+        },
+        "APG": {
+            "caption": "tooltip-index",
+            "doc": "index",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-index",
+            "value": "number"
+        },
+        "APW": {
+            "caption": "tooltip-series-1",
+            "doc": "series 1",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-series-1",
+            "value": "number"
+        },
+        "APX": {
+            "caption": "tooltip-series-2",
+            "doc": "series 2",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-series-2",
+            "value": "number"
+        },
+        "APY": {
+            "caption": "tooltip-series-3",
+            "doc": "series 3",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-series-3",
+            "value": "number"
+        },
+        "APs": {
+            "caption": "loaded",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn false;\n\n}"
+            },
+            "name": "loaded",
+            "value": "boolean"
+        }
+    }
+}

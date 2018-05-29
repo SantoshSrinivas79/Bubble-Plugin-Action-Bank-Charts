@@ -1,0 +1,339 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 300,
+        "width": 400
+    },
+    "display": "Pie - amCharts",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1496752494618x784339945064857600/blank_PNG.png",
+    "events": {
+        "AME": {
+            "caption": "chart is clicked",
+            "doc": "Returns category and value information from chart click event",
+            "name": "chart_click"
+        },
+        "AOF": {
+            "caption": "chart is loaded",
+            "doc": "Will trigger when the chart has finished loading",
+            "name": "chart_loaded"
+        }
+    },
+    "fields": {
+        "AAD": {
+            "caption": "Category data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "data_source_bubble_category",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "data_source_bubble_value",
+            "optional": true,
+            "options": "On,Off",
+            "rank": 6,
+            "value": "number"
+        },
+        "AAH": {
+            "caption": "Google Key",
+            "doc": "Copy Google Sheets ID here",
+            "editor": "StaticText",
+            "name": "data_source_is_google_spreadsheet_key",
+            "optional": true,
+            "rank": 2
+        },
+        "AAI": {
+            "caption": "Category data name",
+            "default_val": "Category name",
+            "doc": "Give category data a name (must match column data header if using Google Sheet)",
+            "editor": "StaticText",
+            "name": "data_category_header",
+            "optional": false,
+            "rank": 5
+        },
+        "AAL": {
+            "caption": "Outer labels",
+            "default_val": false,
+            "doc": "Show value data labels",
+            "editor": "Checkbox",
+            "name": "label_outer_toggle",
+            "optional": true,
+            "rank": 18
+        },
+        "AAM": {
+            "caption": "Outer labels gap",
+            "default_val": "20",
+            "doc": "Control distance of labels inside or outside of pie perimeter",
+            "editor": "Dropdown",
+            "name": "label_outer_distance",
+            "optional": true,
+            "options": "-40,-30,-20,-10,0,10,20,30,40",
+            "rank": 19
+        },
+        "AAN": {
+            "caption": "Show balloon labels",
+            "default_val": true,
+            "doc": "Display balloon labelling",
+            "editor": "Checkbox",
+            "name": "label_balloon_toggle",
+            "rank": 21
+        },
+        "AAO": {
+            "caption": "Chart theme",
+            "default_val": "light",
+            "doc": "Theme controls wide range of chart settings",
+            "editor": "Dropdown",
+            "name": "colour_theme",
+            "options": "light,dark,chalk,black,none",
+            "rank": 15
+        },
+        "AAP": {
+            "caption": "Color data - Bubble",
+            "doc": "For Bubble data - select a list to control series color (should be hex codes)",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "color_hex_bubble",
+            "optional": true,
+            "rank": 16,
+            "value": "text"
+        },
+        "AAQ": {
+            "caption": "Doughnut hole %",
+            "default_val": "0%",
+            "doc": "Set size of hole in middle of pie chart",
+            "editor": "Dropdown",
+            "name": "styling_donut_radius",
+            "optional": true,
+            "options": "0%,20%,40%,60%,80%",
+            "rank": 26
+        },
+        "AAR": {
+            "caption": "3D depth",
+            "default_val": "0",
+            "doc": "Set a 3D depth",
+            "editor": "Dropdown",
+            "name": "styling_3d_depth",
+            "optional": true,
+            "options": "0,5,10,15,20,25,30,35,40",
+            "rank": 27
+        },
+        "AAS": {
+            "caption": "Animation type",
+            "default_val": "none",
+            "doc": "Loading animation options",
+            "editor": "Dropdown",
+            "name": "styling_animation_type",
+            "optional": true,
+            "options": "easeOutSine,easeInSine,elastic,bounce,none",
+            "rank": 22
+        },
+        "AAT": {
+            "caption": "Animation duration",
+            "default_val": 2,
+            "doc": "Length of loading animation",
+            "editor": "StaticNumber",
+            "name": "styling_animation_duration",
+            "optional": true,
+            "rank": 23
+        },
+        "AAU": {
+            "caption": "Animate in sequence",
+            "default_val": true,
+            "doc": "Animate all segments at once, or one-by-one",
+            "editor": "Checkbox",
+            "name": "styling_animation_sequence",
+            "rank": 24
+        },
+        "AAV": {
+            "caption": "Values data name",
+            "default_val": "Series",
+            "doc": "Give series data a name (must match column data header if using Google Sheet)",
+            "editor": "StaticText",
+            "name": "data_values_header",
+            "rank": 7
+        },
+        "AAW": {
+            "caption": "Pick data source",
+            "default_val": "Bubble",
+            "doc": "Select data source for chart",
+            "editor": "Dropdown",
+            "name": "data_source_select",
+            "options": "Google Sheets,Bubble",
+            "rank": 1
+        },
+        "AAX": {
+            "caption": "Data export",
+            "default_val": false,
+            "doc": "Enable export of chart data",
+            "editor": "Checkbox",
+            "name": "data_export_toggle",
+            "rank": 13
+        },
+        "AAY": {
+            "caption": "Angle of chart",
+            "default_val": 0,
+            "doc": "Set a 3D angle for chart",
+            "editor": "StaticNumber",
+            "name": "styling_chart_angle",
+            "optional": true,
+            "rank": 28
+        },
+        "ACo": {
+            "caption": "Color data - Google",
+            "doc": "For Google data - select a column header to control series color (should be hex codes)",
+            "editor": "StaticText",
+            "is_list": false,
+            "name": "color_hex_google",
+            "optional": true,
+            "rank": 17,
+            "value": "_any_thing"
+        },
+        "ACp": {
+            "caption": "Show legend",
+            "default_val": false,
+            "doc": "Enable chart legend",
+            "editor": "Checkbox",
+            "name": "legend_enabled",
+            "rank": 10
+        },
+        "ACq": {
+            "caption": "Legend position",
+            "default_val": "right",
+            "doc": "Control position of chart legend",
+            "editor": "Dropdown",
+            "name": "legend_position",
+            "optional": true,
+            "options": "bottom,left,right,top",
+            "rank": 11
+        },
+        "ADB": {
+            "caption": "Outer labels color",
+            "doc": "Control color of labels",
+            "editor": "Color",
+            "name": "label_color",
+            "optional": true,
+            "rank": 20
+        },
+        "AKu": {
+            "caption": "DATA PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "chart_data_source",
+            "optional": true,
+            "rank": 0
+        },
+        "AKx": {
+            "caption": "STYLE PROPERTIES",
+            "doc": "Section marker only",
+            "editor": "Label",
+            "name": "chart_styling",
+            "optional": true,
+            "rank": 14
+        },
+        "ALa": {
+            "caption": "Google Sheet #",
+            "doc": "Reference number for worksheet within Google Sheet",
+            "editor": "StaticNumber",
+            "name": "data_source_is_google_spreadsheet_sheet",
+            "optional": true,
+            "rank": 3
+        },
+        "ALe": {
+            "caption": "Enable data grouping",
+            "default_val": false,
+            "doc": "Group and merge matching category values",
+            "editor": "Checkbox",
+            "name": "data_merge_enabled",
+            "rank": 9
+        },
+        "ALm": {
+            "caption": "Animate on click",
+            "default_val": "10%",
+            "doc": "When segment is clicked, control size of pullout",
+            "editor": "Dropdown",
+            "name": "styling_pulloutanimation_radius",
+            "optional": true,
+            "options": "0%,5%,10%,15%,20%",
+            "rank": 25
+        },
+        "AMJ": {
+            "caption": "Decimal places",
+            "default_val": 0,
+            "editor": "StaticNumber",
+            "name": "data_decimal_places",
+            "optional": false,
+            "rank": 12
+        },
+        "AND": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "category_count",
+            "rank": 8
+        }
+    },
+    "icon": "ion-ios-refresh-empty",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ALi": {
+            "caption": "loaded",
+            "doc": "Set this state to 'yes' when chart is loaded",
+            "name": "loaded",
+            "value": "boolean"
+        },
+        "AMB": {
+            "caption": "Click category",
+            "doc": "Sets custom state 'Click category' to category value of click",
+            "name": "click_category",
+            "value": "text"
+        },
+        "AMC": {
+            "caption": "Click value",
+            "doc": "Sets custom state 'Click value' to value of click",
+            "name": "click_value",
+            "value": "number"
+        },
+        "AMD": {
+            "caption": "Click percent",
+            "doc": "Sets custom state 'Click value' to % of click",
+            "name": "click_percent",
+            "value": "number"
+        },
+        "APk": {
+            "caption": "tooltip_body",
+            "doc": "",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip_body",
+            "value": "text"
+        },
+        "APl": {
+            "caption": "tooltip_index",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip_index",
+            "value": "number"
+        },
+        "APm": {
+            "caption": "tooltip-series-1",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-series-1",
+            "value": "number"
+        }
+    }
+}

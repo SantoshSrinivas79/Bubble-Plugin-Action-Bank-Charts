@@ -1,0 +1,231 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 400
+    },
+    "display": "Pie - chart.js T",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1519217567360x384066132828593300/blank_PNG.png",
+    "fields": {
+        "ANL": {
+            "caption": "Category data set",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "category_data",
+            "rank": 4,
+            "value": "text"
+        },
+        "ANM": {
+            "caption": "Values data list",
+            "doc": "List of Bubble data that contains chart's category values",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "series_data",
+            "optional": true,
+            "rank": 6,
+            "value": "number"
+        },
+        "ANN": {
+            "caption": "Name of category",
+            "default_val": "Category name",
+            "doc": "Give category data a name (must match column data header if using Google Sheet)",
+            "editor": "StaticText",
+            "name": "category_header",
+            "rank": 5
+        },
+        "ANO": {
+            "caption": "Name of values data",
+            "default_val": "Series",
+            "doc": "Give series data a name (must match column data header if using Google Sheet)",
+            "editor": "StaticText",
+            "name": "data_header",
+            "rank": 7
+        },
+        "ANP": {
+            "caption": "Use Category data as values",
+            "default_val": false,
+            "doc": "Convert a count of the category data into values",
+            "editor": "Checkbox",
+            "name": "category_count",
+            "rank": 8
+        },
+        "ANQ": {
+            "caption": "Enable data grouping",
+            "default_val": false,
+            "doc": "Group and merge matching category values",
+            "editor": "Checkbox",
+            "name": "data_merge_enabled",
+            "rank": 9
+        },
+        "ANa": {
+            "caption": "DATA PROPERTIES",
+            "editor": "Label",
+            "name": "data_properties",
+            "rank": 0
+        },
+        "ANb": {
+            "caption": "Pick data source",
+            "default_val": "Bubble",
+            "doc": "Select data source for chart",
+            "editor": "Dropdown",
+            "name": "data_source_select",
+            "options": "Bubble",
+            "rank": 1
+        },
+        "ANc": {
+            "caption": ".",
+            "editor": "Label",
+            "name": "data_source_is_google_spreadsheet_key",
+            "rank": 2
+        },
+        "ANd": {
+            "caption": ".",
+            "editor": "Label",
+            "name": "data_source_is_google_spreadsheet_sheet",
+            "rank": 3
+        },
+        "ANe": {
+            "caption": "Show legend",
+            "default_val": false,
+            "doc": "Enable chart legend",
+            "editor": "Checkbox",
+            "name": "legend_enabled",
+            "rank": 11
+        },
+        "ANf": {
+            "caption": "STYLE PROPERTIES",
+            "editor": "Label",
+            "name": "chart_styling",
+            "rank": 10
+        },
+        "ANg": {
+            "caption": "Fill color 1A",
+            "default_val": "rgba(1, 22, 39, 1)",
+            "doc": "Set fill color for pie segments",
+            "editor": "Color",
+            "name": "fill_color_1a",
+            "optional": true,
+            "rank": 14
+        },
+        "ANh": {
+            "caption": "Fill color 2",
+            "default_val": "rgba(236, 242, 233, 1)",
+            "doc": "Set fill color for pie segments",
+            "editor": "Color",
+            "name": "fill_color_2a",
+            "optional": true,
+            "rank": 16
+        },
+        "ANi": {
+            "caption": "Fill color 3",
+            "default_val": "rgba(46, 196, 182, 1)",
+            "doc": "Set fill color for pie segments",
+            "editor": "Color",
+            "name": "fill_color_3a",
+            "optional": true,
+            "rank": 17
+        },
+        "ANj": {
+            "caption": "Fill color 4",
+            "default_val": "rgba(231, 29, 54, 1)",
+            "doc": "Set fill color for pie segments",
+            "editor": "Color",
+            "name": "fill_color_4a",
+            "optional": true,
+            "rank": 18
+        },
+        "ANk": {
+            "caption": "Fill color 5",
+            "default_val": "rgba(255, 159, 28, 1)",
+            "doc": "Set fill color for pie segments",
+            "editor": "Color",
+            "name": "fill_color_5a",
+            "optional": true,
+            "rank": 19
+        },
+        "ANl": {
+            "caption": "Fill color 6",
+            "default_val": "rgba(198, 238, 235, 1)",
+            "doc": "Set fill color for pie segments",
+            "editor": "Color",
+            "name": "fill_color_6a",
+            "optional": true,
+            "rank": 20
+        },
+        "ANm": {
+            "caption": "Legend position",
+            "default_val": "bottom",
+            "editor": "Dropdown",
+            "name": "legend_position",
+            "options": "top,bottom,left,right",
+            "rank": 12
+        },
+        "ANq": {
+            "caption": "Doughnut %",
+            "default_val": "0",
+            "editor": "Dropdown",
+            "name": "cutoutpercentage",
+            "options": "0,10,20,30,40,50,60,70,80,90",
+            "rank": 13
+        },
+        "APZ": {
+            "caption": "Fill color 1B",
+            "default_val": "rgba(1, 22, 39, 1)",
+            "doc": "Fill color 1B",
+            "editor": "Color",
+            "name": "fill_color_1b",
+            "optional": true,
+            "rank": 15
+        },
+        "APt": {
+            "caption": "Line thickness",
+            "default_val": 0,
+            "doc": "Line thickness",
+            "editor": "StaticNumber",
+            "name": "segment_stroke",
+            "rank": 21
+        }
+    },
+    "icon": "ion-ios-refresh-empty",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "APn": {
+            "caption": "tooltip-body",
+            "doc": "",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-body",
+            "value": "text"
+        },
+        "APo": {
+            "caption": "tooltip-index",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-index",
+            "value": "number"
+        },
+        "APp": {
+            "caption": "tooltip-series",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "tooltip-series",
+            "value": "number"
+        },
+        "APr": {
+            "caption": "loaded",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn false;\n\n}"
+            },
+            "name": "loaded",
+            "value": "boolean"
+        }
+    }
+}

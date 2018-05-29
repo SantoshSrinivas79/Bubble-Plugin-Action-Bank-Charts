@@ -1,0 +1,23 @@
+{
+    "caption": "Show / Hide series",
+    "doc": "Reveal or hide a series",
+    "fields": {
+        "ACy": {
+            "caption": "Show / Hide toggle",
+            "doc": "holding",
+            "editor": "Dropdown",
+            "name": "show_hide_toggle",
+            "options": "Show,Hide",
+            "rank": 0
+        },
+        "ADR": {
+            "caption": "series_id2",
+            "doc": "holding",
+            "editor": "Dropdown",
+            "name": "series_id2",
+            "optional": true,
+            "options": "Series 1,Series 2,Series 3,Series 4,Series 5,Series 6,Series 7,Series 8",
+            "rank": 1
+        }
+    }
+}
