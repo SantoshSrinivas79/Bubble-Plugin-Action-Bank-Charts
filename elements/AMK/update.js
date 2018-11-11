@@ -95,7 +95,7 @@ function loader() {
   function categoryCount(arr) {
   var a = [], b = [], prev;
 
-    arr.sort();
+    //arr.sort();
     for ( var i = 0; i < arr.length; i++ ) {
         if ( arr[i] !== prev ) {
             a.push(arr[i]);
@@ -129,6 +129,7 @@ function loader() {
   	var positions = [];
 
   
+    
   //look for and rollup any repeated data
     for (var i=0;i<len;i++) {
       
@@ -240,9 +241,17 @@ for (x=0;x<catLen;x++){
       //2) sort:
 
       if (instance.data.category_date_formatting_enabled) {
-      list = _.sortBy(list, function(o) { return moment(o.category, "MM-DD-YYYY"); });
+        
+      list.sort(function(a,b){
+      return moment(b.category, "MM-DD-YYYY").toDate() - moment(a.category, "MM-DD-YYYY").toDate();
+    	});
+        
+        
+      //list = _.sortBy(list, function(o) { return moment(o.category, "MM-DD-YYYY"); });
       }
-      else {
+  
+
+      /*else {
         list = list.sort(function(a, b)
 {
   var nA = a.category.toLowerCase();
@@ -254,7 +263,7 @@ for (x=0;x<catLen;x++){
     return 1;
  return 0;
 });
-      }
+      }*/
   
       //3) separate them back out:
  timeRollup[x] = [];
@@ -263,38 +272,10 @@ for (x=0;x<catLen;x++){
 
           	series_values[x][k] = list[k].value;
     		data_category[x][k] = list[k].category;
-        
-        if (instance.data.data_time_rollup != null ) {
-            
-           if (instance.data.data_time_rollup=="Week") {
-              weekStart = moment(list[k].category, "MM-DD-YYYY").isoWeekday(1)._d;
-              data_category[x][k] = moment(weekStart).format("MM-DD-YYYY");          
-              week = moment(data_category[x][k], "MM-DD-YYYY").week().toString();
-              month = moment(data_category[x][k], "MM-DD-YYYY").month().toString();
-              year = moment(data_category[x][k], "MM-DD-YYYY").year().toString();
-              timeRollup[x][k] = week+month+year;
-            }
-            
-            if (instance.data.data_time_rollup=="Month") {
-              week = moment(list[k].category, "MM-DD-YYYY").week().toString();
-              month = moment(list[k].category, "MM-DD-YYYY").month().toString();
-              year = moment(list[k].category, "MM-DD-YYYY").year().toString();
-              timeRollup[x][k] = month+year;
-              data_category[x][k] = list[k].category;
-            }
-            
-            if (instance.data.data_time_rollup=="Year") {
-              week = moment(list[k].category, "MM-DD-YYYY").week().toString();
-              month = moment(list[k].category, "MM-DD-YYYY").month().toString();
-              year = moment(list[k].category, "MM-DD-YYYY").year().toString();
-              timeRollup[x][k] = year;
-              data_category[x][k] = list[k].category;
-            }
-              
-          
-      }
+
         
       }
+
 }
 }
 
@@ -332,10 +313,10 @@ for (x=0;x<catLen;x++){
         var newDate = minDate.clone();
         var newDateArray = [];        
 
-			for (var m = moment(minDate); m.isBefore(maxDate); m.add(1, 'days')) {
+			for (var m = minDate.clone(); m.isBefore(maxDate); m.add(1, 'days')) {
               var trueCount = 0;
               for (var dates in tempLongCat) {
-               	if (moment(tempLongCat[dates]).isSame(m, 'day')) trueCount++;
+               	if (tempLongCat[dates].isSame(m, 'day')) trueCount++;
               }
               if (trueCount === 0) newDateArray.push(m.format('MM-DD-YYYY').toString());
 				}
@@ -379,7 +360,6 @@ for (x=0;x<catLen;x++){
  
     var canvas = document.getElementById(instance.data.chartCanvasName);
     
-    console.log('Bar Canvas: '+canvas);
   	//get category and series data
 
     //data settings
@@ -482,10 +462,13 @@ for (x=0;x<catLen;x++){
   if (data_category.length>1 || properties.inject_zero) properties.data_merge_enabled=true;
 
     
+
   if (properties.data_merge_enabled) {
   	
       if (instance.data.data_time_rollup != null || data_category.length>1 || properties.inject_zero) fixArrays();
 
+
+    
       for (var r=0;r<data_category.length;r++){
           rollUp(r);
       }
@@ -493,16 +476,10 @@ for (x=0;x<catLen;x++){
     } //if (properties.data_merge_enabled)
   	
     
-    
-    
-    
-
-    
-
 
     
     
-    
+
     
 
     
@@ -512,6 +489,7 @@ for (x=0;x<catLen;x++){
     
 
     var category = data_category[0];
+    //category = [1,2,3,4,5,6,7,8,9,10,11];
 
   
     //COMPILE INTO FINAL CHART OBJECT
@@ -534,7 +512,7 @@ for (x=0;x<catLen;x++){
 
     }
     instance.data.chartObj.data.datasets = tempData;
-    console.log(tempData);
+    
 
 }
   
@@ -599,7 +577,7 @@ for (x=0;x<catLen;x++){
       instance.data.chartObj.options.scales.xAxes[0].distribution = 'linear';
       instance.data.chartObj.options.scales.xAxes[0].unit = 'day';
       instance.data.chartObj.options.scales.xAxes[0].time = {
-        //parser: 'MM-DD-YYYY',
+        parser: 'MM-DD-YYYY',
       	max: moment(),
         min: moment().subtract(6,'days')
       };

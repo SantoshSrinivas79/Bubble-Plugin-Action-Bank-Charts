@@ -351,7 +351,6 @@ var longCat = [];
 
     //data settings
 	var canvas = document.getElementById(instance.data.chartCanvasName);
-    console.log('Canvas: '+canvas);
     instance.data.category_header = "label";
     instance.data.tooltips = properties.category_header.get(0,properties.category_header.length());
 
@@ -479,7 +478,6 @@ var longCat = [];
     }
     
     instance.data.chartObj.data.datasets = tempData;
-    console.log(tempData);
     
 	
 

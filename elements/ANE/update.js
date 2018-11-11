@@ -88,7 +88,6 @@ function(instance, properties, context) {
   //unchecked
   function rollUp(t) {
     var len = data_category[t].length;
-  	console.log(len);
     var num = series_values[t].length;
     var sum;
     var average;
@@ -185,21 +184,17 @@ function(instance, properties, context) {
   //unchecked
   function fixArrays() {
     var longCat = joinCategory(data_category);
-    //console.log("longCat:" + longCat);
     var catLen = data_category.length;
     var serLen = series_values.length;
   
   	for (var x=0;x<catLen;x++){
       
       var oldLen = data_category[x].length;
-      console.log("Old Category:" + data_category[x]);
-      //console.log("Difference:" + arr_diff(longCat,data_category[x]));
 
       data_category[x] = data_category[x].concat(arr_diff(longCat,data_category[x]));
       //data_category[x] = data_category[x].concat(longCat.diff(data_category[x]));
       
       var newLen = data_category[x].length;
-      console.log("New Category:" + data_category[x]);
       
       for (var y=oldLen+1;y<=newLen;y++){
         series_values[x].push(null);
@@ -349,7 +344,6 @@ var longCat = [];
     //create object that merges Bubble data arrays together into single object
     
     category = data_category[0];
-    console.log(category);
 
     
     //COMPILE INTO FINAL CHART OBJECT
@@ -431,16 +425,13 @@ var longCat = [];
   function createChart() {
 
     instance.data.count++;
-    console.log(instance.data.count);
     if (instance.data.count === 1) var myChart = new Chart(instance.data.canvas, instance.data.chartObj);
     if (instance.data.count > 1) {
       instance.data.resetCanvas();
       var myChart = new Chart(instance.data.canvas, instance.data.chartObj);
     }
-    console.log(instance.canvas);
     instance.publishState("loaded",true);
-    console.log("pie height: "+properties.bubble.height);
-    console.log("pie width: "+properties.bubble.width);    
+  
 
 
     //create chart using object defined above

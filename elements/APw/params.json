@@ -1,0 +1,29 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 400
+    },
+    "display": "UTC Offset",
+    "fields": {
+        "APx": {
+            "caption": "Date",
+            "editor": "DynamicValue",
+            "name": "date",
+            "rank": 0,
+            "value": "date"
+        }
+    },
+    "icon": "ion-android-checkbox-blank",
+    "states": {
+        "APy": {
+            "caption": "Offset",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "offset",
+            "value": "number"
+        }
+    }
+}

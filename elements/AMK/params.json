@@ -5,7 +5,7 @@
         "height": 200,
         "width": 400
     },
-    "display": "Bar/Line - chart.js T",
+    "display": "Bar/Line - chart.js",
     "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1522705002378x687556656077504100/blank_PNG.png",
     "fields": {
         "AML": {
@@ -539,7 +539,7 @@
             "doc": "Preset settings",
             "editor": "Dropdown",
             "name": "settings",
-            "options": "Time 1,Time 2,Time 3,Category 1,Category 2",
+            "options": "Time 1,Time 2,Time 3,Category 1,Category 2,TIme 5",
             "rank": 65
         },
         "APb": {
@@ -572,6 +572,7 @@
     "icon": "ion-arrow-graph-up-right",
     "property_applications": {
         "MinWidth": true,
+        "Padding": false,
         "resizable": true
     },
     "states": {
